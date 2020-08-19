@@ -26,11 +26,6 @@ date_format = "Jan 2006"
   date_start = "2019-02-01"
   date_end = ""
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
   """
 
 [[experience]]
@@ -41,11 +36,6 @@ date_format = "Jan 2006"
   date_start = "2018-05-01"
   date_end = "2019-01-31"
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
   """
 
 [[experience]]
@@ -56,11 +46,6 @@ date_format = "Jan 2006"
   date_start = "2014-12-01"
   date_end = "2017-10-31"
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
   """
 
 [[experience]]
@@ -70,13 +55,7 @@ date_format = "Jan 2006"
   location = "Siegen, Germany"
   date_start = "2011-06-01"
   date_end = "2015-06-01"
-  description = """ Worked in one of the first nationwide research projects to access competences of students in computer science. I have been working on developing and validating a test instrument and was involved in the evaluation of the results. I presented research results at international conferences.
-
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
+  description = """
   """
 
 +++
