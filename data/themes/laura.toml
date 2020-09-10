@@ -1,5 +1,5 @@
 # Theme metadata
-name = "Minimal"
+name = "laura"
 
 # Is theme light or dark?
 light = true
@@ -8,11 +8,13 @@ light = true
 primary = "#2962ff"
 
 # Menu
-menu_primary = "#fff"
-menu_text = "#34495e"
-menu_text_active = "#2962ff"
+menu_primary = "#F7F9FB"
+menu_text = "#00887A"
+menu_text_active = "#00887A"
 menu_title = "#2b2b2b"
 
 # Home sections
 home_section_odd = "rgb(255, 255, 255)"
-home_section_even = "rgb(247, 247, 247)"
+home_section_even = "#D3E3FC"
+
+# 77A6F7, FFCCBC

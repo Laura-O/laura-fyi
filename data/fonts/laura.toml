@@ -1,0 +1,11 @@
+# Font style metadata
+name = "laura"
+
+# Optional Google font URL
+google_fonts = "Fira+Sans:400,700|Montserrat|IBM+Plex+Mono"
+
+# Font families
+heading_font = "Fira Sans"
+body_font = "Montserrat"
+nav_font = "Fira Sans"
+mono_font = "IBM+Plex+Mono"
