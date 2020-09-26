@@ -5,16 +5,16 @@ name = "laura"
 light = true
 
 # Primary
-primary = "#2962ff"
+primary = "#003853"
 
 # Menu
-menu_primary = "#F7F9FB"
-menu_text = "#00887A"
+menu_primary = "#003853"
+menu_text = "#F8F0FB"
 menu_text_active = "#00887A"
 menu_title = "#2b2b2b"
 
 # Home sections
 home_section_odd = "rgb(255, 255, 255)"
-home_section_even = "#D3E3FC"
+home_section_even = "#91D4C2"
 
 # 77A6F7, FFCCBC
