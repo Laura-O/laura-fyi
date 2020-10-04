@@ -67,6 +67,8 @@ user_groups:
   - Visitors
 ---
 
-I am a Data Scientist
+Hi!
+
+I am a Data Scientist from Dortmund, Germany.
 
 Apart from that, I am also a [speedcuber](https://www.worldcubeassociation.org/persons/2009OHRN01) and a Senior Delegate for Europe in the [World Cube Association](https://www.worldcubeassociation.org/about).
