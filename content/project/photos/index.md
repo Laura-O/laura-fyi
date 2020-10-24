@@ -1,12 +1,11 @@
 ---
-date: "2020-06-11T00:00:00Z"
-external_link: https://test
+date: "2020-10-12T00:00:00Z"
+external_link: https://lauraohrndorf.smugmug.com/
 image:
-  caption: '[testt](https://www.test.com/)'
+  caption: "[Photo website](https://lauraohrndorf.smugmug.com/)"
   focal_point: Smart
-summary: test
+summary: These are some of the photos I took.
 tags:
-- test
-- software
+  - hobbies
 title: Photos
 ---

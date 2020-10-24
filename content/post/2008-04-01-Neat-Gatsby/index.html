@@ -1,0 +1,118 @@
+---
+title: "Some neat things you can do with Gatsby.js"
+author: Laura
+date: '2018-04-01'
+slug: test
+categories: ["web"]
+tags: ["gatsby-js"]
+subtitle: ''
+summary: ""
+authors: []
+lastmod: '2018-04-01T23:28:40+02:00'
+featured: no
+image:
+  caption: "./images/neat-gatsby.jpg"
+  focal_point: ''
+  preview_only: no
+projects: ['test-project']
+---
+
+
+
+<p>In this article, I will collect topics and approaches related to this website. Your initial reaction might be “That’s a static website, who cares?”, but I am using this page to try things out and I think I can say that I have already learned a lot. So here we go:</p>
+<div id="progressive-web-app" class="section level2">
+<h2>Progressive Web App</h2>
+<p><a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a> (PWAs) are a hot topic. All you need for making a Gatsby page a PWA are these plugins:</p>
+<ul>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/">Gatsby Manifest Plugin</a></li>
+<li><a href="https://www.gatsbyjs.org/packages/gatsby-plugin-offline/">Gatsby Offline Plugin</a></li>
+</ul>
+<p>As the names say, the manifest plugin lets you ship a manifest.json and the offline plugin creates a service worker.
+This website received a score of 64/100 with <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> right after installing the plugins.</p>
+</div>
+<div id="typography.js" class="section level2">
+<h2>Typography.js</h2>
+<p><a href="https://github.com/kyleamathews/typography.js">Typography.js</a> is a powerful tool for creating typography themes. It basically allows to have a unique design on all pages and being able to make changes without changing hundreds of elements.
+It also provides some nice prepared <a href="http://kyleamathews.github.io/typography.js/">themes</a>.</p>
+<div id="installation-using-the-alton-theme" class="section level3">
+<h3>Installation (using the alton theme)</h3>
+<pre class="bash"><code>npm install typography
+npm install typography-theme-alton</code></pre>
+<p>Add it to gatsby-config.js:</p>
+<pre class="javascript"><code>{
+    resolve: `gatsby-plugin-typography`,
+    options: {
+    pathToConfigModule: `src/utils/typography`,
+    },
+},</code></pre>
+<p>Add <em>src/utils/typography.js</em></p>
+<pre class="jsx"><code>import Typography from &#39;typography&#39;;
+import altonTheme from &#39;typography-theme-alton&#39;;
+
+const typography = new Typography(altonTheme);
+
+export default typography;</code></pre>
+<p>In case you are adding <em>typography.js</em> to an existing site (i.e. there are already font-related attributes in your css), you should remove all existing rules to see the changes and then start to customize the theme or create your own theme.</p>
+</div>
+</div>
+<div id="styled-components" class="section level2">
+<h2>Styled components</h2>
+<p>After messing around with various SCSS and CSS files, I decided it’s time to try the often recommended <a href="https://www.styled-components.com/">styled components</a>. The installation couldn’t be easier, it’s just one <code>bash±npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components</code> and add the plugin to your <strong>gatsby-config.js</strong>. Don’t forget the last step, otherwise you will get weird style issues which you are not able to track for hours (believe me!).</p>
+<p>I had some issues because I didn’t start from scratch but most of the solutions were pretty intuitive. <a href="https://jsramblings.com/2017/10/29/migrating-to-styled-components-cheatsheet.html">Here is a cheatsheet</a> that explains how to migrate to styled components and doesn’t ignore topics like keyframes or conditional classnames.</p>
+<p>I think using styled components with Gatsby was a good decision. It took me some time to get used to the approach to <em>not</em> decouple styles and components, but the more I used it, the more did this concept make sense to me.</p>
+</div>
+<div id="testing" class="section level2">
+<h2>Testing</h2>
+<div id="jest-and-enzyme" class="section level3">
+<h3>Jest and Enzyme</h3>
+<p>Testing with <a href="https://facebook.github.io/jest/">Jest</a> and <a href="http://airbnb.io/enzyme/">Enzyme</a> was pretty straightforward. There is not much more to mention than “Install it, use it”. :smile:</p>
+</div>
+</div>
+<div id="continuous-integration" class="section level2">
+<h2>Continuous Integration</h2>
+<div id="travis" class="section level3">
+<h3>Travis</h3>
+<p><a href="https://travis-ci.org/">Travis</a> is probably the best known tool for continuous integration. I can remember my first experiences with Travis when I was learning Ruby on Rails several years ago. tl;dr: I spent hours committing my code again and again to fix all the errors.</p>
+<p>I am not sure if Travis is nicer today, it’s just because I know more about these things or it’s because it’s smooth and easy with Gatsby, but that’s basically what it was for me.</p>
+<div class="figure">
+<img src="images/travis.png" alt="Travis" />
+<p class="caption">Travis</p>
+</div>
+<p>For reference, you can find my travis.yml <a href="https://github.com/Laura-O/gatsby-portfolio/blob/master/.travis.yml">here</a>.</p>
+</div>
+<div id="codecov" class="section level3">
+<h3>Codecov</h3>
+<p>Braking another butterfly on the wheel, I am also using <a href="https://codecov.io/gh/Laura-O/gatsby-portfolio">codecov</a> to keep track of the code coverage of my tests. Adding it to an application is easy and comfortable when you have already configured Travis. It’s basically done by adding one line to your <code>package.json</code>.</p>
+<p>Yes, you can also get some nice statistics when running the tests from the commandline. But the images and visualizations which are generated by Codecov are awesome!</p>
+<div class="figure">
+<img src="images/coverage.png" alt="Codecov" />
+<p class="caption">Codecov</p>
+</div>
+<p>Additionally, Codecov also shows the code coverage (and the change of the code coverage) when a pull request is created:</p>
+<div class="figure">
+<img src="images/codecov-report.png" alt="Codecov" />
+<p class="caption">Codecov</p>
+</div>
+</div>
+<div id="greenkeeper" class="section level3">
+<h3>Greenkeeper</h3>
+<p>And there is also <a href="https://greenkeeper.io/">Greenkeeper</a>. It observes the dependencies of the application and automatically reates a pull request when they get updated, which saves a lot of time. Pretty neat!</p>
+</div>
+<div id="sentry" class="section level3">
+<h3>Sentry</h3>
+<p><a href="https://www.sentry.io">Sentry</a> “provides open source error tracking that shows you every crash in your stack as it happens” (quote from their website). There is a <a href="https://github.com/octalmage/gatsby-plugin-sentry">Gatsby plugin</a> <del>available which makes using Sentry really easy</del> but it didn’t work for me. That’s not really a problem as it is super easy to install manually</p>
+<ul>
+<li>Create a Sentry account</li>
+<li>Install Raven <code>bash±npm install --save raven-js</code></li>
+<li>Add this to your index.js:</li>
+</ul>
+<pre class="javascript"><code>import Raven from &#39;raven-js&#39;;
+
+if (process.env.NODE_ENV === &#39;production&#39;) {
+  Raven.config(&#39;Your client key (DSN)&#39;, {
+    environment: &#39;production&#39;,
+  }).install();
+}</code></pre>
+<p>And you are ready to go! :smile:</p>
+</div>
+</div>
