@@ -24,6 +24,14 @@ subtitle = ""
   [[content.filter_button]]
     name = "All"
     tag = "*"
+  
+  [[content.filter_button]]
+    name = "Visualization"
+    tag = "visualization"
+    
+  [[content.filter_button]]
+    name = "Apps"
+    tag = "apps"
 
   [[content.filter_button]]
     name = "Hobbies"
