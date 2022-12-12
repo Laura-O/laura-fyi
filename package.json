@@ -1,0 +1,24 @@
+{
+  "name": "laura-fyi",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
