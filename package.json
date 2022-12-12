@@ -4,18 +4,42 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "build": "npm-run-all build:css build:html",
+    "build:css": "postcss src/postcss/styles.css -o dist/css/styles.css",
+    "build:html": "eleventy",
+    "clean": "npx del dist",
+    "debug": "DEBUG=* npx eleventy",
+    "prebuild": "npm run clean",
+    "prestart": "npm run clean",
+    "start": "npm run watch",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:css": "postcss src/postcss/styles.css -o dist/css/styles.css --watch",
+    "watch:html": "eleventy --serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^1.0.2",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "del-cli": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-100vh-fix": "^1.0.2",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-media": "^9.0.1",
+    "postcss-custom-properties": "^12.1.11",
+    "postcss-import": "^15.1.0",
+    "postcss-media-minmax": "^5.0.0",
+    "postcss-nested": "^6.0.0",
+    "uglify-js": "^3.17.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
+    "postcss": "^8.4.20",
     "prettier": "2.8.1"
   },
   "lint-staged": {

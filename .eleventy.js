@@ -1,10 +1,34 @@
 module.exports = (config) => {
+  // Compress and combine JS files
+  config.addFilter('jsmin', require('./src/utils/minify-js.js'));
+
+  // Minify the HTML in production
+  if (process.env.NODE_ENV == 'production') {
+    config.addTransform(
+      'htmlmin',
+      require('./src/utils/minify-html.js')
+    );
+  }
+
+  // Watch for changes and reload
+  config.addWatchTarget('src/postcss');
+
+  // Copy assets to dist
+  config.addPassthroughCopy({ 'src/assets/image': 'assets/images' });
+  config.addPassthroughCopy({ 'src/assets/js': 'assets/js' });
+
+
   return {
+    templateFormats: ['njk', 'md', '11ty.js'],
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
+    passthroughFileCopy: true,
     dir: {
-      input: "src",
+      input: "src/site",
+      data: "../_data",
+      images: "../assets/images",
+      includes: "../includes",
       output: "dist",
     },
   };
