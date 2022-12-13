@@ -19,6 +19,10 @@ module.exports = (config) => {
   });
   config.addPassthroughCopy({ 'node_modules/@fortawesome/fontawesome-free/webfonts': 'webfonts' });
 
+  config.addCollection('blog', (collection) => {
+    return [...collection.getFilteredByGlob('./src/site/posts/*.md')].reverse();
+  });
+
   return {
     templateFormats: ['njk', 'md', '11ty.js'],
     markdownTemplateEngine: 'njk',
