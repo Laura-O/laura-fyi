@@ -1,3 +1,4 @@
+:root,
 .light {
     --color-accent: hsl(357, 96%, 46%);
     --color-bg-code: #282c34;
@@ -15,9 +16,13 @@
     --color-fg: hsl(40, 7%, 5%);
     --opacity-dark: 1;
     --opacity-light: 0;
+    --background-color: #f8f9fa;
+    --primary-color: #dee2e6;
+    --font-color: #212529;
+    --secondary-font-color: #495057;
 }
 
-.dark {
+:root:not(.light) {
     --color-accent: hsl(357, 96%, 46%);
     --color-bg-code: #282c34;
     --color-bg-full: #000000;
@@ -34,4 +39,10 @@
     --color-fg: hsla(40, 7%, 90%, 0.87);
     --opacity-dark: 0;
     --opacity-light: 1;
+    --background-color: #044965;
+    --primary-color: #05668d;
+    --font-color: white;
+    --secondary-font-color: rgba(226, 232, 240, 1);
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

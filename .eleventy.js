@@ -17,6 +17,9 @@ module.exports = (config) => {
   config.addPassthroughCopy({ 'src/assets/image': 'assets/images' });
   config.addPassthroughCopy({ 'src/assets/js': 'assets/js' });
 
+  config.addPassthroughCopy({ 'node_modules/@fortawesome/fontawesome-free/css/all.min.css': 'css/fontawesome.css' });
+  config.addPassthroughCopy({ 'node_modules/@fortawesome/fontawesome-free/webfonts': 'webfonts' });
+
 
   return {
     templateFormats: ['njk', 'md', '11ty.js'],
