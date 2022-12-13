@@ -1,22 +1,23 @@
-@import 'variables';
-@import 'colors';
+@import "variables";
+@import "colors";
+@import "theme-switcher";
 
 html {
-    box-sizing: border-box;
-    font-size: 100%;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    font-family: 'Source Serif Pro', 'Georgia', serif;
-    height: 100vh;
-    line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: "Source Serif Pro", "Georgia", serif;
+  height: 100vh;
+  line-height: 1.6;
 }

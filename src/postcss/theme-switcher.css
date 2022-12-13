@@ -1,0 +1,54 @@
+:root:not(.light) {
+  --background-color: #044965;
+  --primary-color: #05668d;
+  --font-color: white;
+  --secondary-font-color: rgba(226, 232, 240, 1);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+:root.light {
+  --background-color: #f8f9fa;
+  --primary-color: #dee2e6;
+  --font-color: #212529;
+  --secondary-font-color: #495057;
+}
+
+.theme-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: var(--box-shadow);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  border-color: rgba(226, 232, 240, 0);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+:root:not(.light) .theme-icon .fa-sun {
+  display: none;
+}
+
+:root:not(.light) .theme-icon .fa-moon {
+  display: inline-block;
+  color: white;
+}
+
+:root.light .theme-icon .fa-sun {
+  display: inline-block;
+}
+
+:root.light .theme-icon .fa-moon {
+  display: none;
+}
+
+.sr-only {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

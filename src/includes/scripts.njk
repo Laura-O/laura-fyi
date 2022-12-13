@@ -1,4 +1,5 @@
 {% set js %}
+{% include "../js/theme-switcher.js" %}
 {% include "../js/main.js" %}
 {% endset %}
 <script>{{ js | jsmin | safe }}</script>
