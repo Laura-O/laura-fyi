@@ -1,6 +1,4 @@
 .theme-icon {
-  width: 2.5rem;
-  height: 2.5rem;
   box-shadow: var(--box-shadow);
   border-width: 1px;
   border-style: solid;
@@ -12,6 +10,11 @@
   align-items: center;
   cursor: pointer;
   font-size: 1em;
+  height: 40px;
+  justify-content: center;
+  justify-self: right;
+  outline: 0;
+  width: 40px;
 }
 
 :root:not(.light) .theme-icon .fa-sun {

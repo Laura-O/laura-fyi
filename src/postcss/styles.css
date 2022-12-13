@@ -1,6 +1,8 @@
-@import "variables";
-@import "colors";
-@import "theme-switcher";
+@import 'variables';
+@import 'colors';
+@import 'theme-switcher';
+@import 'navigation';
+@import 'normalize';
 
 html {
   box-sizing: border-box;
@@ -17,7 +19,14 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Source Serif Pro", "Georgia", serif;
+  font-family: 'Source Serif Pro', 'Georgia', serif;
   height: 100vh;
   line-height: 1.6;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 20px;
 }

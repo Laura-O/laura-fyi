@@ -4,10 +4,7 @@ module.exports = (config) => {
 
   // Minify the HTML in production
   if (process.env.NODE_ENV == 'production') {
-    config.addTransform(
-      'htmlmin',
-      require('./src/utils/minify-html.js')
-    );
+    config.addTransform('htmlmin', require('./src/utils/minify-html.js'));
   }
 
   // Watch for changes and reload
@@ -17,22 +14,24 @@ module.exports = (config) => {
   config.addPassthroughCopy({ 'src/assets/image': 'assets/images' });
   config.addPassthroughCopy({ 'src/assets/js': 'assets/js' });
 
-  config.addPassthroughCopy({ 'node_modules/@fortawesome/fontawesome-free/css/all.min.css': 'css/fontawesome.css' });
+  config.addPassthroughCopy({
+    'node_modules/@fortawesome/fontawesome-free/css/all.min.css': 'css/fontawesome.css',
+  });
   config.addPassthroughCopy({ 'node_modules/@fortawesome/fontawesome-free/webfonts': 'webfonts' });
-
 
   return {
     templateFormats: ['njk', 'md', '11ty.js'],
-    markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     passthroughFileCopy: true,
     dir: {
-      input: "src/site",
-      data: "../_data",
-      images: "../assets/images",
-      includes: "../includes",
-      output: "dist",
+      input: 'src/site',
+      data: '../_data',
+      images: '../assets/images',
+      includes: '../includes',
+      layouts: '../layouts',
+      output: 'dist',
     },
   };
 };

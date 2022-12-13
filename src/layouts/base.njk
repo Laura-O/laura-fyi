@@ -1,0 +1,8 @@
+{% include "_head.njk" %}
+<body>
+    {% include "_header.njk" %}
+    <main>
+        {{ content | safe }}
+    </main>
+    {% include "scripts.njk" %}
+</body></html>{% include "_foot.njk" %}
