@@ -3,6 +3,7 @@
 @import 'theme-switcher';
 @import 'navigation';
 @import 'normalize';
+@import 'breakpoints';
 
 html {
   box-sizing: border-box;
@@ -34,9 +35,49 @@ h6 {
   font-weight: var(--font-weight-bold);
 }
 
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
 .page-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
   padding: 20px;
+}
+
+.post-container {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+}
+
+.post-title {
+  grid-column: 2 / -1;
+  margin: 0;
+  padding: 0;
+}
+
+.post-readtime {
+  grid-column: 2 / -1;
+}
+
+.post-content {
+  grid-column: 2 / -2;
+  font-size: 1.1rem;
+}
+
+.post-navigation {
+  display: grid;
+  grid-column: 2 / -2;
+  grid-template-columns: 2fr 2fr;
 }

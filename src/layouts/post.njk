@@ -4,30 +4,30 @@ layout: base
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
-<article>
+<article class="post-container">
     <h1 class="post-title">{{ title }}</h1>
-    <div class="post-card-footer-right">
+    <div class="post-readtime">
         <div>{{ content | safe | getReadingTime }} min read</div>
     </div>
-    <div class="post">
+    <div class="post-content">
         {{ content | safe }}
     </div>
+    <div class="post-navigation">
+        <div>
+            {% if previousPost %}
+                <a aria-label="{{ previousPost.data.title }}" href="{{ previousPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
+                    <i aria-hidden="true" class="fas fa-arrow-left"></i>
+                    {{ previousPost.data.title }}
+                </a>
+            {% endif %}
+        </div>
+        <div>
+            {% if nextPost %}
+                <a aria-label="{{ nextPost.data.title }}" href="{{ nextPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
+                    {{ nextPost.data.title }}
+                    <i aria-hidden="true" class="fas fa-arrow-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
 </article>
-<div class="">
-    <div>
-        {% if previousPost %}
-            <a aria-label="{{ previousPost.data.title }}" href="{{ previousPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
-                <i aria-hidden="true" class="fas fa-arrow-left"></i>
-                {{ previousPost.data.title }}
-            </a>
-        {% endif %}
-    </div>
-    <div>
-        {% if nextPost %}
-            <a aria-label="{{ nextPost.data.title }}" href="{{ nextPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
-                <i aria-hidden="true" class="fas fa-arrow-right"></i>
-                {{ nextPost.data.title }}
-            </a>
-        {% endif %}
-    </div>
-</div>

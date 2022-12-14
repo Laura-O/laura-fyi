@@ -1,6 +1,8 @@
 .navigation {
   display: flex;
   align-self: right;
+  font-family: var(--font-family-head);
+  font-size: 1.2rem;
 }
 
 .navigation-list {
@@ -14,6 +16,8 @@
 .navigation-list-item {
   margin-block-end: 0;
   margin-inline-end: 10px;
+
+  text-transform: uppercase;
 }
 
 @media (--phone) {
