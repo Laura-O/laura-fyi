@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
 <article>
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-card-footer-right">
@@ -11,3 +13,21 @@ layout: base
         {{ content | safe }}
     </div>
 </article>
+<div class="">
+    <div>
+        {% if previousPost %}
+            <a aria-label="{{ previousPost.data.title }}" href="{{ previousPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
+                <i aria-hidden="true" class="fas fa-arrow-left"></i>
+                {{ previousPost.data.title }}
+            </a>
+        {% endif %}
+    </div>
+    <div>
+        {% if nextPost %}
+            <a aria-label="{{ nextPost.data.title }}" href="{{ nextPost.url }}" rel="prev" title="{{ previousPost.data.title }}">
+                <i aria-hidden="true" class="fas fa-arrow-right"></i>
+                {{ nextPost.data.title }}
+            </a>
+        {% endif %}
+    </div>
+</div>
