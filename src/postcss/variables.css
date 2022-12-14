@@ -1,2 +1,11 @@
-$bodyColor: white;
-$textColor: black;
+:root {
+  /** Font Families */
+  --font-family-base: 'Source Serif Pro', 'Georgia', serif;
+  --font-family-head: 'Work Sans', sans-serif;
+
+  /** Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}

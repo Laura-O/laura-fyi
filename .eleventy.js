@@ -1,6 +1,10 @@
+const eleventyGoogleFonts = require('eleventy-google-fonts');
+
 module.exports = (config) => {
   // Compress and combine JS files
   config.addFilter('jsmin', require('./src/utils/minify-js.js'));
+
+  config.addPlugin(eleventyGoogleFonts);
 
   // Minify the HTML in production
   if (process.env.NODE_ENV == 'production') {
