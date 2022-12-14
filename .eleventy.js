@@ -23,6 +23,12 @@ module.exports = (config) => {
     return [...collection.getFilteredByGlob('./src/site/posts/*.md')].reverse();
   });
 
+  config.addFilter('getReadingTime', (text) => {
+    const wordsPerMinute = 200;
+    const numberOfWords = text.split(/\s/g).length;
+    return Math.ceil(numberOfWords / wordsPerMinute);
+  });
+
   return {
     templateFormats: ['njk', 'md', '11ty.js'],
     markdownTemplateEngine: 'njk',

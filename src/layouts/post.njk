@@ -4,6 +4,9 @@ layout: base
 
 <article>
     <h1 class="post-title">{{ title }}</h1>
+    <div class="post-card-footer-right">
+        <div>{{ content | safe | getReadingTime }} min read</div>
+    </div>
     <div class="post">
         {{ content | safe }}
     </div>
