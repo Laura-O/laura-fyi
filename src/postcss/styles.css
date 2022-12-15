@@ -73,7 +73,7 @@ h3 {
 
 .post-content {
   grid-column: 2 / -2;
-  font-size: 1.1rem;
+  font-size: var(--font-size-normal);
 }
 
 .post-navigation {
