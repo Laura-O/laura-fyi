@@ -4,6 +4,9 @@
 @import 'navigation';
 @import 'normalize';
 @import 'breakpoints';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   box-sizing: border-box;
@@ -45,6 +48,25 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
+}
+
+section {
+  padding: 35px 24px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+}
+
+.column--half {
+  flex: 1 1 48%;
 }
 
 .page-header {

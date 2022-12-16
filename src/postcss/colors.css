@@ -25,13 +25,13 @@
 :root:not(.light) {
   --color-accent: hsl(357, 96%, 46%);
   --color-bg-code: #282c34;
-  --color-bg-full: hsl(50deg 100% 50% / 15%);
-  --color-bg: hsl(40, 7%, 10%);
+  --color-bg-full: rgb(16, 22, 29);
+  --color-bg: rgb(21, 28, 35);
   --color-fg-code: #abb2bf;
   --color-fg-feather-inverse: rgba(0, 0, 0, 0.05);
   --color-fg-feather: rgba(255, 255, 255, 0.05);
   --color-fg-full-inverse: #000000;
-  --color-fg-full: #ffffff;
+  --color-fg-full: rgb(224, 227, 230);
   --color-fg-soft-inverse: rgba(0, 0, 0, 0.2);
   --color-fg-soft: rgba(255, 255, 255, 0.2);
   --color-fg-strong-inverse: rgba(0, 0, 0, 0.8);
