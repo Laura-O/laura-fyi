@@ -1,4 +1,6 @@
-<header class="page-header">
-    {% include "navigation.njk" %}
-    {% include "theme-switcher.njk" %}
+<nav class="border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <div class="flex items-center md:order-1 font-sans">{% include "navigation.njk" %}</div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-2">{% include "theme-switcher.njk" %}</div>
+    </div>
 </header>

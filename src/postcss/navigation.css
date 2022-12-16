@@ -2,7 +2,6 @@
   display: flex;
   align-self: right;
   font-family: var(--font-family-head);
-  font-size: 1.2rem;
 }
 
 .navigation-list {

@@ -1,16 +1,14 @@
-@import 'variables';
 @import 'colors';
-@import 'theme-switcher';
 @import 'navigation';
 @import 'normalize';
-@import 'breakpoints';
+@import 'theme-switcher';
+@import 'variables';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   box-sizing: border-box;
-  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -20,53 +18,29 @@ html {
   box-sizing: inherit;
 }
 
+@layer base {
+  html {
+    font-family: 'Source Serif Pro', 'Georgia', serif;
+  }
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-family-base);
-  height: 100vh;
-  line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-head);
-  font-weight: var(--font-weight-bold);
-}
-
-h1 {
-  font-size: 2.8rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-section {
-  padding: 35px 24px;
-}
-
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.column {
-  flex: 1 1 100%;
-  margin-bottom: 20px;
-}
-
-.column--half {
-  flex: 1 1 48%;
+.menu {
+  white-space: nowrap;
+  text-transform: uppercase;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  padding: 0.75rem 0.25rem;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
 }
 
 .page-header {
@@ -95,7 +69,6 @@ section {
 
 .post-content {
   grid-column: 2 / -2;
-  font-size: var(--font-size-normal);
 }
 
 .post-navigation {
