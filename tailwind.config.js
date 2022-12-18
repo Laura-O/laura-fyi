@@ -4,6 +4,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['src/**/*.njk'],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
