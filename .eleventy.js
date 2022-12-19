@@ -1,11 +1,22 @@
 const eleventyGoogleFonts = require('eleventy-google-fonts');
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 const excerpt = require('./src/plugins/excerpt');
+const shortcodes = require('./src/utils/shortcodes');
 
 module.exports = (config) => {
   // Compress and combine JS files
   config.addFilter('jsmin', require('./src/utils/minify-js.js'));
 
   config.addPlugin(eleventyGoogleFonts);
+
+  let options = {
+    html: true,
+  };
+
+  let markdownLib = markdownIt(options).use(markdownItAttrs);
+
+  config.setLibrary('md', markdownLib);
 
   // Minify the HTML in production
   if (process.env.NODE_ENV == 'production') {
@@ -56,6 +67,9 @@ module.exports = (config) => {
     const numberOfWords = text.split(/\s/g).length;
     return Math.ceil(numberOfWords / wordsPerMinute);
   });
+
+  // Shortcodes
+  config.addPairedShortcode('quote', shortcodes.quote);
 
   return {
     templateFormats: ['njk', 'md', '11ty.js'],
