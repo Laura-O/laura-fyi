@@ -73,7 +73,7 @@ module.exports = (config) => {
   config.addFilter("filterTagList", filterTagList)
 
   config.addCollection('postsByYear', (collection) => {
-    const posts = collection.getFilteredByTag('post').reverse();
+    const posts = collection.getFilteredByTag('posts').reverse();
     const years = posts.map((post) => post.date.getFullYear());
     const uniqueYears = [...new Set(years)];
 
