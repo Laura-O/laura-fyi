@@ -9,15 +9,10 @@
         <link rel="stylesheet" href="/fonts/fonts.css"/>
         <link rel="stylesheet" href="{{ '/css/fontawesome.css' | url }}"/>
     </head>
-    <body></body>
-</html>
-<body>
-    <div class="container">
-        {% include "page-header.njk" %}
-        <main>
+    <body>
+        <div class="flex flex-col h-screen justify-between">
             {{ content | safe }}
-        </main>
-        {% include "page-footer.njk" %}
-        {% include "scripts.njk" %}
-    </div>
-</body>
+            {% include "scripts.njk" %}
+        </div>
+    </body>
+</html>
