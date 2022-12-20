@@ -1,7 +1,7 @@
 ---
 title: 'Design test'
-date: '2000-01-02'
-tags: ['post']
+date: '2000-01-01'
+tags: ['post', 'eleventy']
 ---
 
 ## Quote
