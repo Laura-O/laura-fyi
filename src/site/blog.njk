@@ -8,13 +8,17 @@ layout: default
     <ul class="list-outside list-disc ml-4 mb-4">
         {% for post in yearPosts | reverse %}
             <li class="mb-4">
-                <a class="block no-underline" href="{{ post.url }}">
                     <p class="m-0">
-                        <span class="font-bold underline">{{ post.data.title }}</span>
-                        <span class="inline-block px-2 py-1 ml-2 rounded text-xs">{{ post.data.tags[1] }}</span>
+                        <a class="block no-underline" href="{{ post.url }}">
+                            <span class="font-bold underline">{{ post.data.title }}</span>
+                        </a>
+                        {% set tagUrl %}/tags/{{ post.data.tags[1] | slugify }}/{% endset %}
+                        <a class="block no-underline" href="{{ tagUrl }}">
+                            <span class="inline-block px-2 py-1 ml-2 rounded text-xs">{{ post.data.tags[1] }}</span>
+                        </a>
                     </p>
                     <p class="mt-0 text-gray-600">{% excerpt post %}</p>
-                </a>
+               
             </li>
         {% endfor %}
     </ul>

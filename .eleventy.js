@@ -3,6 +3,7 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const excerpt = require('./src/plugins/excerpt');
 const shortcodes = require('./src/utils/shortcodes');
+const { DateTime } = require("luxon");
 
 module.exports = (config) => {
   // Compress and combine JS files
@@ -38,6 +39,21 @@ module.exports = (config) => {
   config.addCollection('blog', (collection) => {
     return [...collection.getFilteredByGlob('./src/site/posts/*.md')].reverse();
   });
+
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  config.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  });
+
+  config.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  });
+
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+  }
+
+  config.addFilter("filterTagList", filterTagList)
 
   config.addCollection('postsByYear', (collection) => {
     const posts = collection.getFilteredByTag('post').reverse();
