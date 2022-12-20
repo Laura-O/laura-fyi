@@ -1,7 +1,6 @@
 @import 'colors';
 @import 'navigation';
 @import 'normalize';
-@import 'theme-switcher';
 @import 'variables';
 @tailwind base;
 @tailwind components;

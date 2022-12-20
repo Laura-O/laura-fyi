@@ -4,7 +4,7 @@ layout: base
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
-<article class="post-container">
+<article class="mx-auto prose dark:prose-invert prose-lg">
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-readtime">
         <div>{{ content | safe | getReadingTime }} min read</div>

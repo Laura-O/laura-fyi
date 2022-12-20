@@ -1,5 +1,4 @@
-:root,
-.light {
+:root:not(.dark) {
   --color-accent: hsl(357, 96%, 46%);
   --color-bg-code: #282c34;
   --color-bg-full: #ffffff;
@@ -22,7 +21,8 @@
   --secondary-font-color: #495057;
 }
 
-:root:not(.light) {
+:root,
+.dark {
   --color-accent: hsl(357, 96%, 46%);
   --color-bg-code: #282c34;
   --color-bg-full: rgb(16, 22, 29);
