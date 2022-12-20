@@ -9,6 +9,11 @@ layout: default
     <div class="post-readtime">
         <div>{{ content | safe | getReadingTime }} min read</div>
     </div>
+    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    {%- for tag in tags | filterTagList %}
+        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {%- endfor %}
     <div class="post-content">
         {{ content | safe }}
     </div>

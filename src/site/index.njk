@@ -6,7 +6,9 @@ permalink: /
 
 <h1>Welcome to laura.fyi</h1>
 
-<div>test</div>
+{% set maxPosts = collections.posts.length | min(3) %}
+<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-
-<h2>Latest posts<h2>
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "posts-list.njk" %}
