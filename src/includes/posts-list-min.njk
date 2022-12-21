@@ -5,18 +5,13 @@
   style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
   {% for post in postslist | reverse %}
     <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-      <a href="{{ post.url | url }}" class="postlist-link">
+      <a href="{{ post.url | url }}" class="hover:underline text-lg">
         {% if post.data.title %}
           {{ post.data.title }}
         {% else %}
-          <code>{{ post.url }}</code>
+          <p>{{ post.url }}</p>
         {% endif %}
       </a>
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      {% for tag in post.data.tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-      {% endfor %}
     </li>
   {% endfor %}
 </ul>

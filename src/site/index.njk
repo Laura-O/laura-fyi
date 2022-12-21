@@ -4,11 +4,26 @@ layout: default
 permalink: /
 ---
 
-<h1>Welcome to laura.fyi</h1>
-
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
-
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "posts-list.njk" %}
+<h1 class="text-5xl font-sans">Welcome to laura.fyi!</h1>
+<div class="flex md:flex-row flex-col mt-10">
+    <div class="md:basis-1/2 p-5">
+        <h1 class="text-3xl font-sans my-2">Info</h1>
+        <div class="text-lg">I am a Data Scientist and Data Engineer and this is my personal website. You can read a bit more
+            about me on the
+            <a href="{{ navigation.about }}">About page</a>.
+        </div>
+        <div class="text-lg my-5">I like data, tech, traveling, reading, listening to podcasts and many more things, so there is
+            hopefully some interesting content for this website.</div>
+    </div>
+    <div class="md:basis-1/2 p-5">
+        {% set maxPosts = collections.posts.length | min(3) %}
+        <h1 class="text-3xl font-sans my-2">Last
+            {% if maxPosts == 1 %}Post
+            {% else %}
+                {{ maxPosts }} Posts{% endif %}
+        </h1>
+        {% set postslist = collections.posts | head(-3) %}
+        {% set postslistCounter = collections.posts | length %}
+        {% include "posts-list-min.njk" %}
+    </div>
+</div>

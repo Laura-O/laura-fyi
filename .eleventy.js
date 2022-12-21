@@ -3,7 +3,7 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const excerpt = require('./src/plugins/excerpt');
 const shortcodes = require('./src/utils/shortcodes');
-const { DateTime } = require("luxon");
+const { DateTime } = require('luxon');
 
 module.exports = (config) => {
   // Compress and combine JS files
@@ -28,7 +28,7 @@ module.exports = (config) => {
   config.addWatchTarget('src/postcss');
 
   // Copy assets to dist
-  config.addPassthroughCopy({ 'src/assets/image': 'assets/images' });
+  config.addPassthroughCopy({ 'src/assets/images': 'assets/images' });
   config.addPassthroughCopy({ 'src/assets/js': 'assets/js' });
 
   config.addPassthroughCopy({
@@ -42,35 +42,35 @@ module.exports = (config) => {
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   config.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
-  config.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  config.addFilter('readableDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy');
   });
 
   // Get the first `n` elements of a collection.
-  config.addFilter("head", (array, n) => {
-    if(!Array.isArray(array) || array.length === 0) {
+  config.addFilter('head', (array, n) => {
+    if (!Array.isArray(array) || array.length === 0) {
       return [];
     }
-    if( n < 0 ) {
+    if (n < 0) {
       return array.slice(n);
     }
 
     return array.slice(0, n);
   });
 
-   // Return the smallest number argument
-  config.addFilter("min", (...numbers) => {
+  // Return the smallest number argument
+  config.addFilter('min', (...numbers) => {
     return Math.min.apply(null, numbers);
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+    return (tags || []).filter((tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
   }
 
-  config.addFilter("filterTagList", filterTagList)
+  config.addFilter('filterTagList', filterTagList);
 
   config.addCollection('postsByYear', (collection) => {
     const posts = collection.getFilteredByTag('posts').reverse();

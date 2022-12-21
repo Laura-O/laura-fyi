@@ -42,6 +42,13 @@ body {
   transition-duration: 0.5s;
 }
 
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--color-fg-soft);
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: auto;
+}
+
 .page-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -74,4 +81,9 @@ body {
   display: grid;
   grid-column: 2 / -2;
   grid-template-columns: 2fr 2fr;
+}
+
+.text-reading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
