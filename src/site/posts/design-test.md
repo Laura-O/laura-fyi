@@ -4,12 +4,13 @@ date: '2000-01-01'
 tags: ['eleventy']
 ---
 
+This page is used to test and show specific features and functionalities of this website.
+
 ## Quote
 
 {% quote "Source of the Quote", "https://www.lipsum.com/feed/html" %}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 {% endquote %}
-
 
 ## Code
 
@@ -22,7 +23,6 @@ Indented code
     line 2 of code
     line 3 of code
 
-
 Block code "fences"
 
 ```
@@ -31,7 +31,7 @@ Sample text here...
 
 Syntax highlighting
 
-``` js
+```js
 var foo = function (bar) {
   return bar++;
 };

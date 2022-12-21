@@ -10,7 +10,7 @@
                     <!-- primary nav -->
                     <div class="hidden md:flex items-center space-x-1 font-semibold uppercase text-2xl">
                         {% for item in navigation %}
-                            <a class="py-5 px-3 navigation-item-link{% if item.url === page.url %} active{% endif %}" href="{{ item.url }}">
+                            <a class="py-5 px-3 {% if item.url === page.url %} underline decoration-sky-500 decoration-double{% endif %}" href="{{ item.url }}">
                                 {{ item.title }}
                             </a>
                         {% endfor %}
@@ -30,7 +30,7 @@
         <!-- mobile menu -->
         <div class="mobile-menu hidden md:hidden">
             {% for item in navigation %}
-                <a class="block py-2 px-4 text-sm navigation-item-link{% if item.url === page.url %} active{% endif %}" href="{{ item.url }}">
+                <a class="block py-2 px-4 text-sm navigation-item-link{% if item.url === page.url %} underline decoration-sky-500 decoration-double{% endif %}" href="{{ item.url }}">
                     {{ item.title }}
                 </a>
             {% endfor %}

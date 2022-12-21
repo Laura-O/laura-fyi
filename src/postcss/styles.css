@@ -42,13 +42,6 @@ body {
   transition-duration: 0.5s;
 }
 
-.underline {
-  text-decoration: underline;
-  text-decoration-color: var(--color-fg-soft);
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: auto;
-}
-
 .page-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
