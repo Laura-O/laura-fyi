@@ -7,6 +7,9 @@ permalink: /
 <h1 class="text-5xl font-sans">Welcome to laura.fyi!</h1>
 <div class="flex md:flex-row flex-col mt-10">
     <div class="md:basis-1/2 p-5">
+        <img src="/assets/images/hero.jpg" alt="Hero" class="mx-auto"/>
+    </div>
+    <div class="md:basis-1/2 p-5">
         <h1 class="text-3xl font-sans my-2">Info</h1>
         <div class="text-lg">I am a Data Scientist and Data Engineer and this is my personal website. You can read a bit more
             about me on the
@@ -14,6 +17,14 @@ permalink: /
         </div>
         <div class="text-lg my-5">I like data, tech, traveling, reading, listening to podcasts and many more things, so there is
             hopefully some interesting content for this website.</div>
+    </div>
+</div>
+<div class="flex md:flex-row flex-col mt-10">
+    <div class="md:basis-1/2 p-5">
+        <h1 class="text-3xl font-sans my-2">This page</h1>
+        <div class="text-lg">This page is built with Eleventy and TailwindCSS. You can also find more about it on the
+            <a href="{{ navigation.about }}">About page</a>.
+        </div>
     </div>
     <div class="md:basis-1/2 p-5">
         {% set maxPosts = collections.posts.length | min(3) %}

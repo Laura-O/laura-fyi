@@ -29,6 +29,10 @@ body {
   font-family: var(--font-family-base);
 }
 
+a:not(.nav-item) {
+  @apply underline decoration-sky-500 decoration-2;
+}
+
 .menu {
   white-space: nowrap;
   text-transform: uppercase;

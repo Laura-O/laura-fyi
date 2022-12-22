@@ -39,9 +39,6 @@
   }
 
   &.active {
-    text-decoration: underline;
-    text-decoration-color: var(--color-accent);
-    text-decoration-thickness: 0.2em;
-    text-underline-offset: auto;
+    @apply underline decoration-fuchsia-700 decoration-2 underline-offset-2;
   }
 }

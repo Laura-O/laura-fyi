@@ -8,17 +8,17 @@ layout: default
     {% for year, yearPosts in collections.postsByYear %}
         <div class="flex flex-row p-3">
             <h3 class="text-bold text-3xl">{{ year }}</h3>
-            <ul class="list-outside ml-8 mb-4">
+            <ul class="list-outside ml-8 mb-2">
                 {% for post in yearPosts | reverse %}
                     <li class="mb-4">
                         <p class="m-0">
-                            <a class="block no-underline" href="{{ post.url }}">
+                            <a class="block !no-underline" href="{{ post.url }}">
                                 <span class="font-bold text-xl hover:underline">{{ post.data.title }}</span>
                             </a>
                             {% for tag in post.data.tags %}
                                 {% if tag != 'posts' %}
                                     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                                    <a class="" href="{{ tagUrl }}">
+                                    <a class="!no-underline" href="{{ tagUrl }}">
                                         <span class="inline-block px-2 leading-loose bg-sky-700 text-white font-sans rounded text-xs">{{ tag }}</span>
                                     </a>
                                 {% endif %}
