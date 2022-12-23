@@ -1,6 +1,5 @@
 @import 'colors';
 @import 'navigation';
-@import 'normalize';
 @import 'variables';
 @tailwind base;
 @tailwind components;
@@ -33,10 +32,38 @@ a:not(.nav-item) {
   @apply underline decoration-sky-500 decoration-2;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-sans font-bold mb-4;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
 .menu {
   white-space: nowrap;
   text-transform: uppercase;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   position: sticky;
   top: 0px;
   width: 100%;
