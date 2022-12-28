@@ -1,5 +1,5 @@
 <div class="max-w-7xl mt-10">
-    <form class="w-1/2 font-sans" name="contact" method="POST" data-netlify="true">
+    <form class="w-1/2 font-sans" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
         <div class="mb-6">
             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
             <input
@@ -41,6 +41,7 @@
                 rows="7"
                 required></textarea>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <button
             type="submit"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium
