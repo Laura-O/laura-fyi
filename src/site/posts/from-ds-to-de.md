@@ -1,6 +1,7 @@
 ---
 title: 'From Data Science to Data Engineering'
-date: '2022-12-28'
+date: 2022-12-28
+dateUpdated: 2023-01-08
 tags: ['Data Science', 'Data Engineering', 'career']
 ---
 
@@ -63,3 +64,10 @@ Architecture and design are quite a difficult to cover without real use cases. Y
 - [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE) by TechWorld with Nana: free course on YouTube that teaches the basic concepts of Docker.
 - [Kubernetes Tutorial for Beginners](https://youtu.be/X48VuDVv0do)as before, a free course by Nana but this one is about Kubernetes.
 - [Docker & Kubernetes: The Practical Guide](https://www.udemy.com/course/docker-kubernetes-the-practical-guide/) by Academind: this is a 23 hours course which covers all the basics. If you have already used Docker, you can just skip to the Kubernetes part, but there might also be some "good to know"-parts before that. It doesn't have a steep learn curve, so it's quite relaxing to watch (if you can say that about a course).
+
+## Pipelines and Tools
+
+Often, data transactions in data engineering is done with pipelines. Understanding how to use pipelines and also why they are used will certrainly be very helpful.
+
+- Understanding DAGs and why they are useful ([nice article by astronomer.io](https://www.astronomer.io/blog/what-exactly-is-a-dag/))
+- Implement a small project that copies data from one resource to another and does some basic transitions. [Apache Airflow](https://airflow.apache.org/) is probably the most popular data pipelining tool at the time of writing. There are many more though and most of them follow similar ideas, so it doesn't matter much which tool you use.

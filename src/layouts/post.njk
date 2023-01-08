@@ -8,20 +8,25 @@ layout: default
     <h1 class="post-title">{{ title }}</h1>
     <hr class="my-5 h-px bg-gray-200 border-0 dark:bg-gray-700"/>
     <div class="flex flex-row justify-between">
-        <div>{{ content | safe | getReadingTime }} min read</div>
         <div>
             <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
         </div>
+        <div>{{ content | safe | getReadingTime }} min read</div>
     </div>
-    <div>
-        {%- for tag in tags | filterTagList %}
-            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-            <span class="inline-block px-2 leading-loose bg-sky-700 text-white font-sans rounded text-xs no-underline">
-                <a href="{{ tagUrl | url }}" class="no-underline">
-                    {{ tag }}
-                </a>
-            </span>
-        {%- endfor %}
+        <div class="text-sm italic">
+            Updated: <time datetime="{{ dateUpdated | htmlDateString }}">{{ dateUpdated | readableDate }}</time>
+    </div>
+    <div class="flex flex-row justify-between py-5">
+        <div>
+            {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <span class="inline-block px-2 leading-loose bg-sky-700 text-white font-sans rounded text-xs no-underline">
+                    <a href="{{ tagUrl | url }}" class="no-underline">
+                        {{ tag }}
+                    </a>
+                </span>
+            {%- endfor %}
+        </div>
     </div>
     <div class="post-content">
         {{ content | safe }}
