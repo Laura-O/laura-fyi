@@ -101,12 +101,6 @@ h5 {
   grid-column: 2 / -2;
 }
 
-.post-navigation {
-  display: grid;
-  grid-column: 2 / -2;
-  grid-template-columns: 2fr 2fr;
-}
-
 .text-reading {
   font-size: 1.25rem;
   line-height: 1.75rem;
