@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html class="scroll-smooth">
     <head>
-        <title>{{ title }}</title>
+        <title>{{ title or renderData.title or metadata.title }}</title>
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta property="og:title" content={ title or renderData.title or metadata.title }/>
+        <meta property="og:url" content={ page.url } />
+        <meta property="og:description" content={description or renderData.description} />
+        <meta property="og:image" content="/static/img/logo.png" />
+        <meta property="og:type" content="article" />
+        <meta name="description" content="{description or renderData.description}" />
+        <link rel="canonical" href={ page.url }/>
+        <meta name="robots" content="index, follow" />
         <link rel="stylesheet" href="/css/styles.css"/>
         <link rel="stylesheet" href="/fonts/fonts.css"/>
         <link rel="stylesheet" href="{{ '/css/fontawesome.css' | url }}"/>
+        
+        {% if canonical %}
+        <link rel="canonical" href="{{ canonical }}" />
+        {% endif %}
     </head>
     <body>
         <div class="flex flex-col h-screen justify-between">
