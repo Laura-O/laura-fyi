@@ -28,7 +28,7 @@ body {
   font-family: var(--font-family-base);
 }
 
-a:not(.nav-item) {
+a:not(.nav-item, .no-underline) {
   @apply underline decoration-sky-500 decoration-2 transition hover:delay-300 hover:bg-sky-500;
 }
 
@@ -104,4 +104,18 @@ h5 {
 .text-reading {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.post img {
+  margin-bottom: 0;
+}
+
+.post p {
+  margin-top: 0;
 }

@@ -13,9 +13,11 @@ layout: default
         </div>
         <div>{{ content | safe | getReadingTime }} min read</div>
     </div>
-        <div class="text-sm italic">
+    {% if dateUpdated %}
+    <div class="text-sm italic">
             Updated: <time datetime="{{ dateUpdated | htmlDateString }}">{{ dateUpdated | readableDate }}</time>
     </div>
+    {% endif %}
     <div class="flex flex-row justify-between py-5">
         <div>
             {%- for tag in tags | filterTagList %}
