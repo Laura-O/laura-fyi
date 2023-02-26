@@ -9,12 +9,14 @@ layout: default
         <div class="flex flex-row p-3">
             <h3 class="text-bold text-3xl">{{ year }}</h3>
             <ul class="list-outside ml-8 mb-2">
-                {% for post in yearPosts | reverse %}
+                {% for post in yearPosts %}
                     <li class="mb-4">
                         <p class="m-0">
-                            <a class="block !no-underline" href="{{ post.url }}">
-                                <span class="font-bold text-xl hover:underline">{{ post.data.title }}</span>
-                            </a>
+                            <div class="py-2">
+                                <a class="!no-underline" href="{{ post.url }}">
+                                    <span class="font-bold text-xl hover:underline">{{ post.data.title }}</span>
+                                </a>
+                            </div>
                             {% for tag in post.data.tags %}
                                 {% if tag != 'posts' %}
                                     {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
