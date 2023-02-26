@@ -95,6 +95,8 @@ Apart from these issues, the code looks fine and runs after fixing the first iss
 
 {% myImage "./src/assets/images/code-ai3.png", "The streamlit dashboard", "post" %}
 
+### Writing tests with ChatGPT
+
 Next, I asked ChatGPT to write a unit test for the application.
 
 ```python
