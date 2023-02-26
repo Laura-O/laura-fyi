@@ -1,22 +1,21 @@
 const eleventyGoogleFonts = require('eleventy-google-fonts');
 const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
 const excerpt = require('./src/plugins/excerpt');
 const shortcodes = require('./src/utils/shortcodes');
 const { DateTime } = require('luxon');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const { imageShortcode } = require('./config/shortcodes');
 
 module.exports = (config) => {
   config.addPlugin(eleventyGoogleFonts);
+  config.addPlugin(syntaxHighlight);
 
   let options = {
     html: true,
   };
 
-  let markdownLib = markdownIt(options).use(markdownItAttrs);
-
-  config.setLibrary('md', markdownLib);
+  let markdownLib = markdownIt(options);
 
   // Minify the HTML in production
   if (process.env.NODE_ENV == 'production') {

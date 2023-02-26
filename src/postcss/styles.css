@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'navigation';
 @import 'variables';
+@import 'prism';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,7 +30,7 @@ body {
 }
 
 a:not(.nav-item, .no-underline) {
-  @apply underline decoration-sky-500 decoration-2 transition hover:delay-300 hover:bg-sky-500;
+  @apply underline decoration-sky-500 decoration-1 transition hover:delay-300 hover:bg-sky-500;
 }
 
 h1,
@@ -118,4 +119,20 @@ picture {
 
 .post p {
   margin-top: 0;
+}
+
+p code,
+li code {
+  background-color: var(--color-bg-code);
+  border-radius: 0.3em;
+  color: var(--color-fg-code);
+  white-space: normal;
+  font-weight: 400 !important;
+}
+
+.prose :where(code):not(:where([class~='not-prose'] *))::before {
+  content: '';
+}
+.prose :where(code):not(:where([class~='not-prose'] *))::after {
+  content: '';
 }

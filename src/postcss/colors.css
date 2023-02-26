@@ -1,6 +1,6 @@
 :root:not(.dark) {
   --color-accent: hsl(357, 96%, 46%);
-  --color-bg-code: #282c34;
+  --color-bg-code: #a0a9bd;
   --color-bg-full: #ffffff;
   --color-bg: hsl(40, 7%, 90%);
   --color-fg-code: #abb2bf;
