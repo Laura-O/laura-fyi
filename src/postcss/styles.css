@@ -30,7 +30,7 @@ body {
 }
 
 a:not(.nav-item, .no-underline) {
-  @apply underline decoration-sky-500 decoration-1 transition hover:delay-300 hover:bg-sky-500;
+  @apply underline decoration-sky-500 decoration-2 transition hover:delay-300 hover:bg-sky-500;
 }
 
 h1,
