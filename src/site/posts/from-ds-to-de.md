@@ -13,13 +13,11 @@ There is no such thing as a typical Data Scientist, so writing a step-by-step gu
 
 I have worked as a professional Full-Stack Developer for about a year and also did some system administration tasks as a working student. Therefore, I know Linux and how to use the command line. If you don't, that's certainly something to learn.
 
+### Linux and Bash
+
+[The Linux Command Line Bootcamp](https://www.udemy.com/course/the-linux-command-line-bootcamp/learn/lecture/26371502?start=0#overview) by Colt Steele. It is 16 hours long, which might sound scary initially, but it's convenient to watch and entertaining. The course is well structured and you can easily skip parts if you consider topics less relevant (you can definitely skip the chapter about Nano and use vim instead 😉).
+
 ## General
-
-#### Designing Data-Intensive Applications (DDIA) by Martin Kleppmann ([O'Reilly](https://learning.oreilly.com/library/view/-/9781491903063/))
-
-Designing Data-Intensive Applications (also known as DDIA) has one big disadvantage: you might feel demoralized after realizing that you know much less than you thought you would know. However, this book is motivating at the same time as it explains everything in a relatively simple and understandable way. It's certainly a challenging read, though.
-
-I read the book once, from the very first to the last page, which took me more than one month. You can certainly do this much faster, but so many details caught my attention and motivated me to do more research on specific topics.
 
 #### Fundamentals of Data Engineering (FDE) by Joe Reis and Matt Housley ([O'Reilly](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/))
 
@@ -27,13 +25,19 @@ Although this was published only a few months ago, it has already become a funda
 
 The book gives you a very concise overview about the Data Engineering landscapes and does a great job in structuring tasks, technologies, and processes. It only touches on specific technologies, but focuses on the wider concepts.
 
-I have read that some recommend reading FDE before DDIA, but I disagree. It's rather up to your preference and it also makes perfect sense to start with DDIA to get a deep understanding of the technology and then map this to the fundamental concepts with FDE.
+I have read that some recommend reading FDE before DDIA (see below), but I disagree. It's rather up to your preference and experience. DDIA requires a lot of general knowledge about engineering. But if you have that, it also makes perfect sense to start with DDIA to get a deep understanding of the technology and then map this to the fundamental concepts with FDE.
+
+#### Designing Data-Intensive Applications (DDIA) by Martin Kleppmann ([O'Reilly](https://learning.oreilly.com/library/view/-/9781491903063/))
+
+Designing Data-Intensive Applications (also known as DDIA) has one big disadvantage: you might feel demoralized after realizing that you know much less than you thought you would know. However, this book is motivating at the same time as it explains everything in a relatively simple and understandable way. It's certainly a challenging read, though.
+
+I read the book once, from the very first to the last page, which took me more than one month. You can certainly do this much faster, but so many details caught my attention and motivated me to do more research on specific topics.
 
 ## Data Bases and Data Modeling
 
 ### Data Warehouses
 
-#### The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling by Ralph Kimball [(Wiley)](https://www.wiley.com/en-us/The+Data+Warehouse+Toolkit:+The+Definitive+Guide+to+Dimensional+Modeling,+3rd+Edition-p-9781118530801)
+- The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling by Ralph Kimball [(Wiley)](https://www.wiley.com/en-us/The+Data+Warehouse+Toolkit:+The+Definitive+Guide+to+Dimensional+Modeling,+3rd+Edition-p-9781118530801)
 
 This book is in its 3rd edition of 2013. That's a long time for most tech topics, but this book gives a great overview of Data Warehousing and dimensional modeling. Reading the first two chapters will already give you a good understanding of the fundamental concepts.
 
@@ -47,13 +51,15 @@ Apart from that, it's helpful to practice SQL. It doesn't matter much whether yo
 
 At least in Germany, coding interviews are not very popular and so are websites like [Leetcode](https://www.leetcode.com) that help you practice for those interviews.
 
-I often struggled to solve simple tasks quickly. Writing some fancy algorithms to solve some unique problems? Sure! Writing three lines of code to do something with a dictionary? Eh, yes, I am sure there is an easy way, let me google that ....
+However, in my experience, they teach you helpful skills. I often struggled to solve simple tasks quickly. Writing some fancy algorithms to solve some unique problems? Sure! Writing three lines of code to do something with a dictionary? Eh, yes, I am sure there is an easy way, let me google that ....
 
-Doing some of the fundamental Leetcode problems has undoubtedly helped a lot, especially the ones about data structures.
+Doing some of the fundamental Leetcode problems has undoubtedly helped a lot, especially the ones about data structures (for example, [arrays](https://leetcode.com/tag/array/)) and [75 problems](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions), so I recommend doing some of them from time to time. It's even a nice habit you can start: when I was preparing for my new job, I solved at least one task in the morning.
 
 ## Architecture and design
 
-Architecture and design are pretty difficult to cover without real use cases. However, you can start by implementing typical data solution architectures like setting up a dashboard and a database with Docker and then adding a pipeline tool like [Apache Airflow](https://airflow.apache.org/) to fill the database with simulated data.
+Architecture and design are pretty difficult to cover without real use cases. While some recommend doing many projects, I believe this is not an efficient way to spend your time. Especially when you have not much experience, setting up a project takes a lot of time and debugging takes even more.
+
+If that is something that motivates you, go ahead. If it doesn't, I rather recommend doing 1 or 2 example projects to understand the basics. You can start by implementing typical data solution architectures like setting up a dashboard and a database with Docker and then adding a pipeline tool like [Apache Airflow](https://airflow.apache.org/) or [Dagster](https://dagster.io/) to fill the database with simulated data.
 
 ### System design
 
