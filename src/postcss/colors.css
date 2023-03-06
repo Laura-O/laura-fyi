@@ -2,7 +2,7 @@
   --color-accent: hsl(357, 96%, 46%);
   --color-bg-code: #a0a9bd;
   --color-bg-full: #ffffff;
-  --color-bg: hsl(40, 7%, 90%);
+  --color-bg: #e7e5e4; /* stone-200 */
   --color-fg-code: #abb2bf;
   --color-fg-feather-inverse: rgba(255, 255, 255, 0.05);
   --color-fg-feather: rgba(0, 0, 0, 0.05);
@@ -26,7 +26,7 @@
   --color-accent: hsl(357, 96%, 46%);
   --color-bg-code: #282c34;
   --color-bg-full: rgb(16, 22, 29);
-  --color-bg: rgb(21, 28, 35);
+  --color-bg: #1c1917; /* stone-900 */
   --color-fg-code: #abb2bf;
   --color-fg-feather-inverse: rgba(0, 0, 0, 0.05);
   --color-fg-feather: rgba(255, 255, 255, 0.05);
