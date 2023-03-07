@@ -29,7 +29,7 @@ body {
   font-family: var(--font-family-base);
 }
 
-a:not(.nav-item, .no-underline) {
+a:not(.nav-item, .mobile-nav-item, .no-underline) {
   @apply underline decoration-sky-500 decoration-2 transition hover:delay-300 hover:bg-sky-500;
 }
 
